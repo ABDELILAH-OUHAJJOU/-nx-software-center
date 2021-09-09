@@ -12,10 +12,32 @@ The AppImages displayed are fetched from:
 # Install
 
 ### Requirements
- * CMake 3.10.0 +
- * Qt 5.10+
- * KF5 Plasma 5.45.0 +
- * LibAppImage (latest)
+#### Debian/Ubuntu
+
+```
+extra-cmake-modules,
+libkf5config-dev (>= 5.24.0~),
+libkf5coreaddons-dev (>= 5.24.0~),
+libkf5i18n-dev (>= 5.24.0~),
+libkf5kio-dev,
+libkf5notifications-dev (>= 5.24.0~),
+libkf5service-dev (>= 5.24.0~),
+libqt5svg5-dev,
+libqt5webview5-dev,
+libqt5xmlpatterns5-dev,
+libfuse-dev,
+libappimage-dev,
+desktop-file-utils,
+mauikit-dev,
+libmauikitfilebrowsing-dev,
+libmauikitaccounts-dev,
+libappimage-dev,
+qt5-qmake,
+qtbase5-dev (>= 5.5.0~),
+qtdeclarative5-dev,
+qtquickcontrols2-5-dev,
+qtwebengine5-dev
+```
  
 ### Build
  1. `git clone https://github.com/Nitrux/nx-software-center.git` 
