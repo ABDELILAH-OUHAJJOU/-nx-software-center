@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=NX Software Center
-Exec=nx-software-center
-Icon=nx-software-center
-Type=Application
-GenericName=Software Center
-Categories=Qt;KDE;System;
-Keywords=program;software;repository;package;install;remove;update;apps;applications;
-Comment=Software store for AppImages
