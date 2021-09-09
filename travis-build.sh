@@ -26,7 +26,7 @@ mk-build-deps -i -t "apt-get --yes" -r
 
 ### Clone repo.
 
-git clone --single-branch --branch v1.0 https://github.com/Nitrux/nx-software-center.git
+git clone --depth 1 --branch v1.0 https://github.com/Nitrux/nx-software-center.git
 
 mv nx-software-center/* .
 
