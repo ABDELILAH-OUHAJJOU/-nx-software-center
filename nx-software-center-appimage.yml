@@ -74,20 +74,25 @@ AppDir:
     - qml-module-qt-labs-settings
     
     # KF5 DEPENDENCIES
-    - libkf5i18n5
-    - libkf5notifications5
+    - kinit
+    - kio
+    - kio-extras
+    - libkdecorations2-5v5
+    - libkdecorations2private7
     - libkf5configcore5
     - libkf5configgui5
     - libkf5configwidgets5
+    - libkf5coreaddons-data
+    - libkf5coreaddons5
+    - libkf5i18n5
     - libkf5kiofilewidgets5
-    - libkf5syntaxhighlighting5
-    - libkdecorations2-5v5
-    - libkdecorations2private7
+    - libkf5notifications5
     - libkf5plasma5
     - libkf5plasmaquick5
-    - kio
-    - kio-extras
-    - kinit
+    - libkf5syntaxhighlighting5
+    - libkf5windowsystem-data
+    - libkf5windowsystem5
+    - libqt5network5
 
     # Other
     - libtag1v5
