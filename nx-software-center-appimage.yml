@@ -102,6 +102,7 @@ AppDir:
     - libkf5windowsystem-data
     - libkf5windowsystem5
     - libkf5kiowidgets5
+    - libkf5kiogui5
 
     # Other
     # - qml-module-org-kde-mauikit
