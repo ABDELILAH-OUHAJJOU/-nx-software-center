@@ -41,8 +41,9 @@ AppDir:
     - sourceline: deb https://packagecloud.io/nitrux/repo/debian/ trixie main
       key_url: 'https://packagecloud.io/nitrux/repo/gpgkey'
 
-# include vs exclude: using btoh lists act as whitelist.
-# If a package is also listed in include and exclude it's whitelisted and include din the AppImage.
+# include vs exclude: using both lists act as whitelist.
+#
+# If a package is listed in include and exclude it's whitelisted and included in the AppImage.
 # If it's only in exclude it's excluded and not added to the AppImage.
 #
 # only necessary dependencies should be in include.
@@ -99,8 +100,7 @@ AppDir:
     - qml-module-org-kde-kirigami2
     - qml-module-org-kde-kquickimageeditor
 
-  exclude:
-
+    exclude:
     - bash
     - coreutils
     - dirmngr
