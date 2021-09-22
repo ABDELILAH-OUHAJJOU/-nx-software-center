@@ -132,6 +132,7 @@ AppDir:
     - libsquashfuse0
     - libmd4c0
     - libdouble-conversion3
+    - libpcre2-16-0
 
     exclude:
     - bash
