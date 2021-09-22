@@ -70,6 +70,7 @@ AppDir:
     - qt5-image-formats-plugins
     - libqt5widgets5
     - libqt5gui5
+    - libqt5qml5
     
     # QT QUICK DEPENDENCIES
     - qml-module-qtqml-workerscript2
@@ -84,6 +85,7 @@ AppDir:
     - qml-module-qtquick2
     
     # KF5 DEPENDENCIES
+    - kinit
     - kio
     - kio-extras
     - libkdecorations2-5v5
