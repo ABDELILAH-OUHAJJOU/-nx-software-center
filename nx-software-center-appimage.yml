@@ -52,6 +52,7 @@ AppDir:
     include:
     # CORE DEPENDENCIES
     - bash
+    - coreutils
     - gettext
     
     # BASIC QT DEPENDENCIES
@@ -68,6 +69,7 @@ AppDir:
     - libqt5xml5
     - qt5-image-formats-plugins
     - libqt5widgets5
+    - libqt5gui5
     
     # QT QUICK DEPENDENCIES
     - qml-module-qtqml-workerscript2
