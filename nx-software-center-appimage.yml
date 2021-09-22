@@ -63,8 +63,6 @@ AppDir:
     - libqt5quicktemplates2-5
     - libqt5sql5
     - libqt5sql5-sqlite
-    - libqt5sql5-sqlite
-    - libqt5svg5
     - libqt5svg5
     - libqt5x11extras5
     - libqt5xml5
@@ -73,7 +71,6 @@ AppDir:
     # QT QUICK DEPENDENCIES
     - qml-module-org-kde-kirigami2
     - qml-module-qt-labs-platform
-    - qml-module-qt-labs-settings
     - qml-module-qt-labs-settings
     - qml-module-qtgraphicaleffects
     - qml-module-qtqml
@@ -86,12 +83,9 @@ AppDir:
     - qml-module-qtquick-layouts
     - qml-module-qtquick-privatewidgets
     - qml-module-qtquick-shapes
-    - qml-module-qtquick-shapes
     - qml-module-qtquick-templates2
     - qml-module-qtquick-window2
     - qml-module-qtquick2
-    - qml-module-qtquick2
-    - qt5-image-formats-plugins
     
     # KF5 DEPENDENCIES
     - kinit
@@ -103,8 +97,6 @@ AppDir:
     - libkf5configgui5
     - libkf5configwidgets5
     - libkf5coreaddons-data
-    - libkf5coreaddons-data
-    - libkf5coreaddons5
     - libkf5coreaddons5
     - libkf5i18n5
     - libkf5kiofilewidgets5
