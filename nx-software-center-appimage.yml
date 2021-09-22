@@ -107,6 +107,7 @@ AppDir:
     - libkf5kiowidgets5
     - libkf5kiogui5
     - libkf5kiocore5
+    - libkf5service5
 
     # Other
     # - qml-module-org-kde-mauikit
@@ -122,6 +123,7 @@ AppDir:
     - qml-module-qtgraphicaleffects
     - qml-module-qtqml
     - qml-module-qtqml-models2
+    - qml-module-qtqml-statemachine
     - libfam0
     - libicu66
 
