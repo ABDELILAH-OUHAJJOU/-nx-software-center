@@ -53,9 +53,9 @@ AppDir:
     - bash
     - coreutils
     - gettext
-    - zlib1g
     
     # BASIC QT DEPENDENCIES
+    - libqt5core5a
     - libqt5network5
     - libqt5quick5
     - libqt5quickcontrols2-5
