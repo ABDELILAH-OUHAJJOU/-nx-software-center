@@ -67,6 +67,7 @@ AppDir:
     - libqt5x11extras5
     - libqt5xml5
     - qt5-image-formats-plugins
+    - libqt5widgets5
     
     # QT QUICK DEPENDENCIES
     - qml-module-qtqml-workerscript2
@@ -119,6 +120,7 @@ AppDir:
     - qml-module-qtqml-models2
     - qml-module-qtqml-statemachine
     - libfam0
+    - libicu66
 
     exclude:
     - bash
