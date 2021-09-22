@@ -1,4 +1,7 @@
-# NX Software Center
+# NX Software Center 
+
+[![Nitrux Software Center AppImage](https://github.com/Nitrux/nx-software-center/actions/workflows/build-appimage-amd64.yml/badge.svg)](https://github.com/Nitrux/nx-software-center/actions/workflows/build-appimage-amd64.yml) [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Generic badge](https://img.shields.io/badge/OS-Linux-blue.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/Release-1.0.0-blue.svg)](https://shields.io/)
+
 
 _A graphical front end to manage [AppImage](https://appimage.org/) applications built using [MauiKit](https://mauikit.org/)._
 
