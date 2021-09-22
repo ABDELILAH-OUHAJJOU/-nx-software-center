@@ -53,25 +53,45 @@ AppDir:
     - bash
     - coreutils
     - gettext
+    - zlib1g
     
     # BASIC QT DEPENDENCIES
-    - libqt5svg5
+    - libqt5network5
+    - libqt5quick5
+    - libqt5quickcontrols2-5
+    - libqt5quickshapes5
+    - libqt5quicktemplates2-5
+    - libqt5sql5
     - libqt5sql5-sqlite
+    - libqt5sql5-sqlite
+    - libqt5svg5
+    - libqt5svg5
+    - libqt5x11extras5
+    - libqt5xml5
     - qt5-image-formats-plugins
-    - qtwayland5
     
     # QT QUICK DEPENDENCIES
+    - qml-module-org-kde-kirigami2
+    - qml-module-qt-labs-platform
+    - qml-module-qt-labs-settings
+    - qml-module-qt-labs-settings
+    - qml-module-qtgraphicaleffects
+    - qml-module-qtqml
+    - qml-module-qtqml-models2
+    - qml-module-qtqml-statemachine
+    - qml-module-qtqml-workerscript2
     - qml-module-qtquick-controls
     - qml-module-qtquick-controls2
     - qml-module-qtquick-dialogs
     - qml-module-qtquick-layouts
+    - qml-module-qtquick-privatewidgets
     - qml-module-qtquick-shapes
+    - qml-module-qtquick-shapes
+    - qml-module-qtquick-templates2
+    - qml-module-qtquick-window2
     - qml-module-qtquick2
-    - qml-module-qtqml-models2
-    - qml-module-qtqml-statemachine
-    - qml-module-qtqml-workerscript2
-    - qml-module-qt-labs-platform
-    - qml-module-qt-labs-settings
+    - qml-module-qtquick2
+    - qt5-image-formats-plugins
     
     # KF5 DEPENDENCIES
     - kinit
@@ -83,16 +103,18 @@ AppDir:
     - libkf5configgui5
     - libkf5configwidgets5
     - libkf5coreaddons-data
+    - libkf5coreaddons-data
+    - libkf5coreaddons5
     - libkf5coreaddons5
     - libkf5i18n5
     - libkf5kiofilewidgets5
+    - libkf5kirigami2-5
     - libkf5notifications5
     - libkf5plasma5
     - libkf5plasmaquick5
     - libkf5syntaxhighlighting5
     - libkf5windowsystem-data
     - libkf5windowsystem5
-    - libqt5network5
 
     # Other
     - libtag1v5
