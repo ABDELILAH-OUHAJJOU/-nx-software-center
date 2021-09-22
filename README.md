@@ -47,10 +47,11 @@ The AppImages displayed are fetched from:
 
 ### Build
  1. `git clone https://github.com/Nitrux/nx-software-center.git` 
- 1. `mkdir build`
- 1. `cd build`
- 1. `cmake ../nx-software-center -DCMAKE_BUILD_PREFIX=Release -DCMAKE_INSTALL_PREFIX=/usr`
- 1. `make`
+ 2. `mkdir build`
+ 3. `cd build`
+ 4. `cmake ../nx-software-center -DCMAKE_BUILD_PREFIX=Release -DCMAKE_INSTALL_PREFIX=/usr`
+ 5. `make`
+ 6. `make install`
 
 # Issues
 If you find problems with the contents of this repository please create an issue.
