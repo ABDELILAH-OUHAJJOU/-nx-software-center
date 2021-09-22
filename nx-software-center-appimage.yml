@@ -130,6 +130,7 @@ AppDir:
     - libfam0
     - libicu66
     - libsquashfuse0
+    - libmd4c0
 
     exclude:
     - bash
