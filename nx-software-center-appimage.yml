@@ -26,6 +26,7 @@ AppDir:
     env:
       PATH: '${APPDIR}/usr/bin:${APPDIR}/bin:${APPDIR}/usr/lib/x86_64-linux-gnu/libexec/kf5:${PATH}'
       APPDIR_LIBRARY_PATH: "$APPDIR/lib/x86_64-linux-gnu:$APPDIR/usr/lib/x86_64-linux-gnu"
+      QT_QUICK_CONTROLS_STYLE: "maui-style"
   after_bundle:
     - cd $APPDIR/bin/ && ln -sf bash sh
   apt:
@@ -103,6 +104,7 @@ AppDir:
     - libkf5windowsystem5
     - libkf5kiowidgets5
     - libkf5kiogui5
+    - libkf5kiocore5
 
     # Other
     # - qml-module-org-kde-mauikit
