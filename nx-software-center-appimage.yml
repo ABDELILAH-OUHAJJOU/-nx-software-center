@@ -108,8 +108,8 @@ AppDir:
     - libkf5kiogui5
     - libkf5kiocore5
     - libkf5service5
-    - libkf5soild5
-
+    - libkf5solid5
+    
     # Other
     # - qml-module-org-kde-mauikit
     # - qml-module-org-mauikit-filebrowsing
