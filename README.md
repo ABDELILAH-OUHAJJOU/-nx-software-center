@@ -9,8 +9,9 @@ The AppImages displayed are fetched from:
 * https://www.appimagehub.com/
 
 # Screenshots
- 
-![](https://user-images.githubusercontent.com/5911329/99120975-c80ecf00-25c9-11eb-8712-7a7c14d3b928.png)
+
+![Screenshot_20210922_003304](https://user-images.githubusercontent.com/3053525/134288548-a8cdb968-51ca-4b75-a192-72f1be9158be.png)
+
 
 # Install
 
