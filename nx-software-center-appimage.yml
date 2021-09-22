@@ -131,6 +131,7 @@ AppDir:
     - libicu66
     - libsquashfuse0
     - libmd4c0
+    - libdouble-conversion3
 
     exclude:
     - bash
