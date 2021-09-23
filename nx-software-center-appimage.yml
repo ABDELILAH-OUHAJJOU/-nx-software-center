@@ -45,32 +45,21 @@ AppDir:
     include:
     # CORE DEPENDENCIES
     - bash
-    - coreutils
-    - gettext
     
     # BASIC QT DEPENDENCIES
-    - libqt5svg5
     - libqt5sql5-sqlite
     
     # QT QUICK DEPENDENCIES
-    - qml-module-qtquick-controls
     - qml-module-qtquick-controls2
-    - qml-module-qtquick-dialogs
-    - qml-module-qtquick-layouts
     - qml-module-qtquick-shapes
     - qml-module-qtquick2
-    - qml-module-qtqml-models2
     
     # KF5 DEPENDENCIES
-    - libkf5i18n5
     - libkf5notifications5
-    - libkf5configcore5
     - libkf5kiofilewidgets5
     - libkf5kiocore5
 
     # Other
-    - libtag1v5
-    - librsvg2-common
     - libappimage1.0
     - qml-module-org-kde-kirigami2
 
@@ -83,6 +72,7 @@ AppDir:
     - perl
     - perl-*
     - gnupg
+    - libstdc++6
 
   files:
     include:
