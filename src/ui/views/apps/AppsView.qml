@@ -46,27 +46,6 @@ Maui.Page
 
     Maui.Dialog
     {
-        id: appUpdateDialog
-
-        title: i18n("AppImage Update")
-        message: i18n("Please wait...")
-        rejectButton.visible: false
-
-        acceptButton.onClicked:
-        {
-            appUpdateDialog.visible = false;
-        }
-
-        function showDialog(fileName, status)
-        {
-            message = status
-
-            appUpdateDialog.visible = true;
-        }
-    }
-
-    Maui.Dialog
-    {
         id: appRemoveDialog
 
         property int index : -1
@@ -247,6 +226,20 @@ Maui.Page
         }
     }
 
+    Maui.Notify
+    {
+        id: _packageUpdateSuccess
+        componentName: "org.nx.softwarecenter"
+        eventId: "packageReady"
+    }
+
+    Maui.Notify
+    {
+        id: _packageUpdateError
+        componentName: "org.nx.softwarecenter"
+        eventId: "packageError"
+    }
+
     Connections
     {
         target: _appsList
@@ -265,17 +258,26 @@ Maui.Page
             appRemoveDialog.visible = false;
         }
 
-        function onAppUpdateSuccess(msg) {
-            console.log("AppImage updated successfully.");
-            
-            appUpdateDialog.showDialog(_appsListView.model.get(_appsListView.currentIndex).path.split("/").pop(), 
-                msg);
+        function onAppUpdateSuccess(idx, msg) {
+            var app_name = _appsModel.get(_appsModel.mappedToSource(idx))["name"]
+            console.log(app_name, msg);
+
+            root.notify(null, app_name, i18n(msg),  null, 9500, i18n("Dismiss"))
+
+            _packageUpdateSuccess.title = app_name
+            _packageUpdateSuccess.message = i18n(msg)
+            _packageUpdateSuccess.send()
         }
 
-        function onAppUpdateError(err) {
-            console.log("AppImage update error.");
-            appUpdateDialog.showDialog(_appsListView.model.get(_appsListView.currentIndex).path.split("/").pop(),
-                err);
+        function onAppUpdateError(idx, err) {
+            var app_name = _appsModel.get(_appsModel.mappedToSource(idx))["name"]
+            console.log(app_name, err);
+            
+            root.notify(null, app_name, i18n(err),  null, 9500, i18n("Dismiss"))
+
+            _packageUpdateError.title = app_name
+            _packageUpdateError.message = i18n(err)
+            _packageUpdateError.send()
         }
     }
 }

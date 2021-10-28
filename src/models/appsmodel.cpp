@@ -53,8 +53,12 @@ void AppsModel::updateApp(const int &index)
 
     updater = new QAppImageUpdate(appImagePath, /*singleThreaded=*/false, /*parent=*/this);
     
-    connect(updater, &QAppImageUpdate::error, this, &AppsModel::handleError);
-    connect(updater, &QAppImageUpdate::finished, this, &AppsModel::handleFinished);
+    connect(updater, &QAppImageUpdate::error, this, [=](short errorCode, short action){
+        handleError(errorCode, action, index);
+    });
+    connect(updater, &QAppImageUpdate::finished, this, [=](QJsonObject info, short action){
+        handleFinished(info, action, index);
+    });
 
     updater->setShowLog(false);
     
@@ -118,24 +122,24 @@ void AppsModel::clear()
     emit this->countChanged();
 }
 
-void AppsModel::handleError(short errorCode, short action)
+void AppsModel::handleError(short errorCode, short action, int index)
 {
     if(action == QAppImageUpdate::Action::Update) {
         qInfo() << "AppsModel::handleError # " << QAppImageUpdate::errorCodeToString(errorCode);
-        emit appUpdateError("AppImage update error.\n\nError Message:"+QAppImageUpdate::errorCodeToString(errorCode));
+        emit appUpdateError(index, "AppImage update error.\n\nError Message:"+QAppImageUpdate::errorCodeToString(errorCode));
     } else if ( action == QAppImageUpdate::Action::CheckForUpdate ) {
         qInfo() << "AppsModel::handleError # " << QAppImageUpdate::errorCodeToString(errorCode);
-        emit appUpdateError("AppImage check for update error.\n\nError Message:"+QAppImageUpdate::errorCodeToString(errorCode));
+        emit appUpdateError(index, "AppImage check for update error.\n\nError Message:"+QAppImageUpdate::errorCodeToString(errorCode));
     }
 
     return;
 }
 
-void AppsModel::handleFinished(QJsonObject info, short action)
+void AppsModel::handleFinished(QJsonObject info, short action, int index)
 {
     if(action == QAppImageUpdate::Action::Update) {
         qInfo() << "AppsModel::handleFinished # Update:: " << info;
-        emit appUpdateSuccess("AppImage updated successfully.");
+        emit appUpdateSuccess(index, "AppImage updated successfully.");
     } else if(action == QAppImageUpdate::Action::CheckForUpdate) {
         qInfo() << "AppsModel::handleFinished # CheckForUpdate:: " << info;
 
@@ -143,7 +147,7 @@ void AppsModel::handleFinished(QJsonObject info, short action)
             updater->start(QAppImageUpdate::Action::Update); /* Start the update. */
         } else {
             qInfo() << "AppsModel::handleFinished # AppImage is already updated and latest";
-            emit appUpdateError("AppImage is already updated and latest.");
+            emit appUpdateError(index, "AppImage is already updated and latest.");
         }
     }
 

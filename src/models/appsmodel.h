@@ -31,8 +31,8 @@ signals:
     void appLaunchSuccess();
     void appLaunchError(int err);
     void appDeleteSuccess();
-    void appUpdateSuccess(QString msg);
-    void appUpdateError(QString msg);
+    void appUpdateSuccess(int index, QString msg);
+    void appUpdateError(int index, QString msg);
 
     // void isUpdatableChanged(bool isUpdatable);
 
@@ -54,8 +54,8 @@ private:
     void unintegrate(const QUrl &url);
     void clear();
 
-    void handleError(short errorCode, short action);
-    void handleFinished(QJsonObject info, short action);
+    void handleError(short errorCode, short action, int index);
+    void handleFinished(QJsonObject info, short action, int index);
 };
 
 #endif // APPSMODEL_H
