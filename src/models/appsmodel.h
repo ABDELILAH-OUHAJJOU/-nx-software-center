@@ -16,6 +16,7 @@ class AppsModel : public MauiList
     Q_OBJECT
 
     // Q_PROPERTY(bool isUpdatable MEMBER m_isUpdatable NOTIFY isUpdatableChanged)
+    Q_PROPERTY(QVector<bool> isAppUpdatable MEMBER m_isAppUpdatable NOTIFY isAppUpdatableChanged)
 
 public:
     // bool m_isUpdatable = false;
@@ -35,6 +36,7 @@ signals:
     void appUpdateError(int index, QString msg);
 
     // void isUpdatableChanged(bool isUpdatable);
+    void isAppUpdatableChanged(bool isUpdatable);
 
 public slots:
     void launchApp(const int &index);
@@ -48,6 +50,7 @@ private:
     Store *m_store;
     QFileSystemWatcher * m_watcher;
     QAppImageUpdate *updater;
+    QVector<bool> m_isAppUpdatable;
 
     void setList();
 

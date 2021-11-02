@@ -205,7 +205,7 @@ Maui.Page
                 Action
                 {
                     icon.name: "download"
-                    // enabled: _appsList.isUpdatable
+                    enabled: _appsList.isAppUpdatable[_appsModel.mappedToSource(index)]
                     onTriggered:
                     {
                         _appsListView.currentIndex = index;
