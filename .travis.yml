@@ -9,7 +9,7 @@ script:
 
 branches:
   only:
-    - main
+    - build-deb
 
 notifications:
   email: false
