@@ -5,11 +5,12 @@ before_install:
 
 script:
   - sudo ./travis-build.sh
-  - package_cloud push nitrux/repo/debian/trixie *.deb
+  - package_cloud push nitrux/testing/debian/trixie *.deb
 
 branches:
   only:
-    - build-deb
+    - main
 
 notifications:
   email: false
+  
