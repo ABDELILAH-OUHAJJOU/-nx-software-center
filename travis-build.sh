@@ -60,7 +60,7 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 
 ### Clone repo.
 
-git clone --depth 1 --branch v1.0 https://github.com/Nitrux/nx-software-center.git
+git clone --depth 1 --branch master https://github.com/Nitrux/nx-software-center.git
 
 rm -rf nx-software-center/{LICENSE,README.md}
 
@@ -97,7 +97,7 @@ checkinstall -D -y \
 	--install=no \
 	--fstrans=yes \
 	--pkgname=nx-software-center \
-	--pkgversion=2.1.0 \
+	--pkgversion=2.1.0+1+master \
 	--pkgarch=amd64 \
 	--pkgrelease="1" \
 	--pkglicense=LGPL-3 \
