@@ -30,9 +30,9 @@ wget -qO /etc/apt/sources.list.d/neon-user-repo.list https://raw.githubuserconte
 DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \
 	55751E5D > /dev/null
 
-curl -L https://packagecloud.io/nitrux/testing/gpgkey | apt-key add -;
+curl -L https://packagecloud.io/nitrux/repo/gpgkey | apt-key add -;
 
-wget -qO /etc/apt/sources.list.d/nitrux-testing-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.nitrux.testing
+wget -qO /etc/apt/sources.list.d/nitrux-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.nitrux
 
 DEBIAN_FRONTEND=noninteractive apt -qq update
 
@@ -50,9 +50,9 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 	libqt5xmlpatterns5-dev \
 	libfuse-dev \
 	libappimage-dev \
-	mauikit-git \
-	mauikit-accounts-git \
-	mauikit-filebrowsing-git \
+	mauikit \
+	mauikit-accounts \
+	mauikit-filebrowsing \
 	qtbase5-dev \
 	qtdeclarative5-dev \
 	qtquickcontrols2-5-dev \
@@ -96,8 +96,8 @@ make
 checkinstall -D -y \
 	--install=no \
 	--fstrans=yes \
-	--pkgname=nx-software-center-git \
-	--pkgversion=2.1.1+git \
+	--pkgname=nx-software-center \
+	--pkgversion=2.1.0.1+master \
 	--pkgarch=amd64 \
 	--pkgrelease="1" \
 	--pkglicense=LGPL-3 \
