@@ -32,7 +32,7 @@ DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --re
 
 curl -L https://packagecloud.io/nitrux/repo/gpgkey | apt-key add -;
 
-wget -qO /etc/apt/sources.list.d/nitrux-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.nitrux
+wget -qO /etc/apt/sources.list.d/nitrux-testing-repo.list https://raw.githubusercontent.com/Nitrux/iso-tool/development/configs/files/sources.list.nitrux.testing
 
 DEBIAN_FRONTEND=noninteractive apt -qq update
 
@@ -50,9 +50,9 @@ DEBIAN_FRONTEND=noninteractive apt -qq -yy install --no-install-recommends \
 	libqt5xmlpatterns5-dev \
 	libfuse-dev \
 	libappimage-dev \
-	mauikit \
-	mauikit-accounts \
-	mauikit-filebrowsing \
+	mauikit-git \
+	mauikit-accounts-git \
+	mauikit-filebrowsing-git \
 	qtbase5-dev \
 	qtdeclarative5-dev \
 	qtquickcontrols2-5-dev \
@@ -97,7 +97,7 @@ checkinstall -D -y \
 	--install=no \
 	--fstrans=yes \
 	--pkgname=nx-software-center \
-	--pkgversion=2.1.0.1+master \
+	--pkgversion=2.1.1+git \
 	--pkgarch=amd64 \
 	--pkgrelease="1" \
 	--pkglicense=LGPL-3 \
@@ -106,7 +106,7 @@ checkinstall -D -y \
 	--pakdir=../.. \
 	--maintainer=uri_herrera@nxos.org \
 	--provides=nx-software-center \
-	--requires="libappimage1.0 \(\>= 1.0.3\),libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libqt5core5a,libqt5gui5,libqt5network5,libqt5qml5,libqt5widgets5,libstdc++6,mauikit \(\>= 2.1.0\),mauikit-accounts \(\>= 2.1.0\),mauikit-filebrowsing \(\>= 2.1.0\),qml-module-qt-labs-platform,qml-module-qtwebview" \
+	--requires="libappimage1.0 \(\>= 1.0.3\),libc6,libgcc-s1,libkf5coreaddons5,libkf5i18n5,libqt5core5a,libqt5gui5,libqt5network5,libqt5qml5,libqt5widgets5,libstdc++6,mauikit-git \(\>= 2.1.1+git\),mauikit-accounts-git \(\>= 2.1.1+git\),mauikit-filebrowsing-git \(\>= 2.1.1+git\),qml-module-qt-labs-platform,qml-module-qtwebview" \
 	--nodoc \
 	--strip=no \
 	--stripso=yes \

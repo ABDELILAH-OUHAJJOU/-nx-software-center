@@ -9,7 +9,7 @@ script:
 
 branches:
   only:
-    - build-deb-stable
+    - git-master
 
 notifications:
   email: false
